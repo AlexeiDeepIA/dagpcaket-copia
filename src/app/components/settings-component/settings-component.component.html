@@ -1,0 +1,33 @@
+<div class="ml-28 mt-16 p-6 w-auto h-[100vh]">
+    <div class="px-6 ml-36">
+        <span class="font-bold text-xl"> Configuracion </span>
+    </div>
+    <div class="flex p-6 ml-36">
+        <ul class="flex gap-6">
+            <li class=""> 
+                <button (click)="showBasicInfo()" class="border-dagblue border-b-2 transition-all border-opacity-0 hover:border-b-2 hover:border-opacity-100 outline-none">
+                    <span class=""> Informacion basica </span>
+                </button>
+            </li>
+            <li> 
+                <button (click)="showAddress()" class="border-dagblue border-b-2 transition-all border-opacity-0 hover:border-b-2 hover:border-opacity-100 outline-none">
+                    <span class=""> Direccion </span>
+                </button>
+            </li>
+            <li>
+                <button (click)="showPIN()" class="border-dagblue border-b-2 transition-all border-opacity-0 hover:border-b-2 hover:border-opacity-100 outline-none">
+                    <span class=""> NIP </span>
+                </button>
+            </li>   
+            <li>
+                <button (click)="showSecurity()" class="border-dagblue border-b-2 transition-all border-opacity-0 hover:border-b-2 hover:border-opacity-100 outline-none">
+                    <span class=""> Seguridad </span>
+                </button>
+            </li>            
+        </ul>
+    </div>
+    <app-account *ngIf="basicInfo"></app-account>
+    <app-address *ngIf="address"></app-address>
+    <app-pin *ngIf="pin"></app-pin>
+    <app-password *ngIf="security"></app-password>
+</div>

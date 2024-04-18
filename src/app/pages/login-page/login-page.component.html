@@ -1,0 +1,53 @@
+<div class="md:w-full md:h-full relative">    
+    <div class="md:grid md:grid-cols-2">
+        <!-- Contenedor Izquierda -->
+        <div class="hidden md:flex md:justify-center md:items-center md:h-[100vh]">            
+            <div class="relative">
+                <img src="https://www.beetrack.com/hubfs/Fotos%20Blog/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(9).jpg" class="md:w-full md:h-[100vh] md:object-cover">
+                <div class="md:absolute md:inset-0 bg-gradient-to-r from-dagpk/70 to-dagpk/10">
+                    <div class="md:flex md:justify-center md:items-center md:h-[100vh]">
+                        <span class="text-white font-extrabold text-5xl"> ¡Hola, bienvenido de nuevo! </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contenedor Derecha -->
+        <div class="p-12 flex flex-col justify-center items-center h-[100vh] md:flex md:flex-col md:justify-center md:items-center md:min-w-80 md:h-[100vh]">
+            <div class="md:w-[80%]">
+                <img src="../../../assets/images/dagPacket-logo.png" class="md:pb-12">
+            </div>
+            <div class="pt-12 md:pt-4">
+                <span class="font-bold text-lg md:text-2xl md:min-h-32"> Ingresar a Dagpcket </span>
+                <p class="hidden md:block"> Ingresa tus credencias </p>
+                <form #loginForm="ngForm" (submit)="signIn(loginForm)">
+                    <div class="min-w-72 md:min-w-96 md:pt-4">
+                        <div class="pt-4 pb-3 md:flex md:flex-col md:pt-4 md:pb-4">
+                            <input name="email" type="text" placeholder="Email" class="border-2 p-2 rounded-lg border-gray-100 shadow-md min-w-full focus:border-dagpk focus:outline-none" ngModel>                                                    </div>
+                        <div class="pb-2 md:flex md:flex-col md:pb-2">
+                            <input name="password" type="password" placeholder="Password" class="border-2 p-2 rounded-lg border-gray-100 shadow-md min-w-full focus:border-dagpk focus:outline-none" ngModel>
+                        </div>
+                        <div class="pt-4 md:pt-6">
+                            <button [routerLink]="['/home']" type="submit" class="bg-dagpk p-2 min-w-full text-white rounded-lg font-bold">
+                                Ingresar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="pt-3">
+                    <span class=""> Olvidaste tu contraseña? </span>
+                </div>
+                <div class="pt-6 flex items-center space-x-2">
+                    <hr class="bg-dagpk p-0.5 flex-grow">
+                    <span class="text-gray-700 font-bold">No tienes cuenta?</span>
+                    <hr class="bg-dagpk p-0.5 flex-grow">
+                </div>                
+                <div class="pt-4">
+                    <button [routerLink]="['/signup']" class="border-2 border-dagpk p-2 w-full rounded-lg font-bold hover:bg-dagpk hover:text-white duration-200">
+                        Registrate
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-loader *ngIf="showLoader"></app-loader>
+</div>

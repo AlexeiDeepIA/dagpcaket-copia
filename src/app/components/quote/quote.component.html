@@ -1,0 +1,174 @@
+<div class="ml-36 mt-16 p-6 w-auto h-[100vh]">
+    <div class="px-6 ml-36">
+        <span class="font-bold text-xl"> Cotizar </span>
+    </div>
+    <div class="flex p-6 ml-36">
+        <div class="bg-gray-100 rounded-lg w-[70vw] shadow-lg">
+            <!-- Destino -->
+            <div class="p-4 flex flex-col justify-between">
+                <div class="flex-col p-2">                
+                    <span class="font-bold text-lg"> Destino </span>                              
+                </div>                
+                <div class="radio-group">
+                    <input type="radio" id="nacional" name="tipo" value="Nacional" [(ngModel)]="selectedOption" (change)="onOptionChange()">
+                    <label for="nacional">Nacional</label>
+                  
+                    <input type="radio" id="internacional" name="tipo" value="Internacional" [(ngModel)]="selectedOption" (change)="onOptionChange()">
+                    <label for="internacional">Internacional</label>
+                  </div>
+            </div>
+            <div class="px-4 flex justify-start w-full gap-6">
+                <div class="relative group w-1/2">
+                    <input type="text" name="name" id="name" class="block rounded-lg p-3 w-full text-sm text-gray-900 border-2 appearance-none dark:focus:border-dagblue focus:outline-none focus:ring-0 focus:border-dagblue peer" placeholder=" " required />
+                    <label for="name" class="pl-4 peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-2 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-dagblue peer-focus:dark:text-dagblue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"> C.P de Origen</label>
+                  </div>
+                <div class="relative z-0  group w-1/2">
+                    <input type="email" name="surname" id="surname" class="block rounded-lg p-3 w-full text-sm text-gray-900 border-2 appearance-none dark:focus:border-dagblue focus:outline-none focus:ring-0 focus:border-dagblue peer" placeholder=" " required />
+                    <label for="surname" class="pl-4 peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-2 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-dagblue peer-focus:dark:text-dagblue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"> C.P de Destino </label>
+                </div>
+                <div *ngIf="showCity" class="relative  group w-1/2">
+                    <input type="email" name="surname" id="surname" class="block rounded-lg p-3 w-full text-sm text-gray-900 border-2 appearance-none dark:focus:border-dagblue focus:outline-none focus:ring-0 focus:border-dagblue peer" placeholder=" " required />
+                    <label for="surname" class="pl-4 peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-2 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-dagblue peer-focus:dark:text-dagblue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"> Ciudad </label>
+                </div>
+            </div>   
+             <!-- Asegurar paquete -->
+            <div class="p-4 mb flex flex-col justify-between">
+                <div class="flex-col p-2">                
+                    <span class="font-bold text-lg"> Seguro </span>                              
+                </div>                
+                <div class="radio-group">
+                    <input type="radio" id="noInsured" name="noInsured" value="No asegurado" [(ngModel)]="isInsured" (change)="hasInsurance()">
+                    <label for="noInsured"> No asegurado </label>
+                  
+                    <input type="radio" id="Insured" name="Insured" value="Asegurado" [(ngModel)]="isInsured" (change)="hasInsurance()">
+                    <label for="Insured">Asegurado</label>
+                  </div>
+            </div>           
+            <div *ngIf="showValue" class="px-4 flex justify-start w-full gap-6">
+                <div class="relative z-0 mb-5 group w-1/2">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      </svg>
+                    </div>
+                    <input type="email" name="phone" id="phone" class="block rounded-lg p-3 pl-10 w-full text-sm text-gray-900 border-2 appearance-none dark:focus:border-dagblue focus:outline-none focus:ring-0 focus:border-dagblue peer" placeholder=" " required />
+                    <label for="phone" class="pl-10 peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-dagblue peer-focus:dark:text-dagblue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
+                      Valor declarado
+                    </label>
+                  </div>                        
+            </div>    
+            <!--  -->      
+            <div class="p-4 mb flex flex-col justify-between">
+                <div class="flex-col p-2">                
+                    <span class="font-bold text-lg"> Tipo de envio </span>                              
+                </div>                
+                <div class="radio-group">
+                    <input type="radio" id="shipment" name="shipment" value="Sobre" [(ngModel)]="shippingType" (change)="shipmentType()">
+                    <label for="shipment"> Sobre </label>
+                  
+                    <input type="radio" id="paquete" name="paquete" value="Paquete" [(ngModel)]="shippingType" (change)="shipmentType()">
+                    <label for="paquete"> Paquete </label>
+                  </div>
+            </div>     
+            <!-- Alerta -->          
+            <div *ngIf="!showType" class="px-4 pb-4 flex justify-start w-full gap-6">
+                <div class="bg-yellow-100 border-2 flex justify-start items-center gap-2 text-yellow-600 border-dagyel rounded-lg w-[40vw] p-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-dagyel">
+                        <path fill-rule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-sm"> El sobre debe tener una medida maxima de un documento tamaño oficio y un peso maximo de 1kg. </span>                      
+                </div>
+            </div>
+            <!-- Fomrulario para paquete -->
+            <div *ngIf="showType" class="px-4 flex justify-start w-full gap-6">
+                <div class="relative z-0 mb-5 group w-1/4">
+                    <input type="email" name="phone" id="phone" class="block rounded-lg p-3 w-full text-sm text-gray-900 border-2 appearance-none dark:focus:border-dagblue focus:outline-none focus:ring-0 focus:border-dagblue peer" placeholder=" " required />
+                    <label for="phone" class="pl-4 peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-2 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-dagblue peer-focus:dark:text-dagblue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"> Peso (KG) </label>
+                </div>
+                <div class="relative z-0 mb-5 group w-1/4">
+                    <input type="email" name="email" id="email" class="block rounded-lg p-3 w-full text-sm text-gray-900 border-2 appearance-none dark:focus:border-dagblue focus:outline-none focus:ring-0 focus:border-dagblue peer" placeholder=" " required />
+                    <label for="email" class="pl-4 peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-2 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-dagblue peer-focus:dark:text-dagblue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"> Largo (cm) </label>
+                </div>
+                <div class="relative z-0 mb-5 group w-1/4">
+                    <input type="email" name="email" id="email" class="block rounded-lg p-3 w-full text-sm text-gray-900 border-2 appearance-none dark:focus:border-dagblue focus:outline-none focus:ring-0 focus:border-dagblue peer" placeholder=" " required />
+                    <label for="email" class="pl-4 peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-2 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-dagblue peer-focus:dark:text-dagblue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"> Ancho (cm) </label>
+                </div>
+                <div class="relative z-0 mb-5 group w-1/4">
+                    <input type="email" name="email" id="email" class="block rounded-lg p-3 w-full text-sm text-gray-900 border-2 appearance-none dark:focus:border-dagblue focus:outline-none focus:ring-0 focus:border-dagblue peer" placeholder=" " required />
+                    <label for="email" class="pl-4 peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-2 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-dagblue peer-focus:dark:text-dagblue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"> Alto (cm) </label>
+                </div>
+            </div>    
+            <!-- Descripcion del paquete -->     
+            <div class="flex-col p-2 px-6">                
+                <span class="font-bold text-lg"> Destino </span>                              
+            </div>
+            <div class="px-4 pb-4 flex justify-start w-full gap-6">                
+                <div class="relative group w-1/2">
+                    <input type="text" name="name" id="name" class="block rounded-lg p-3 w-full text-sm text-gray-900 border-2 appearance-none dark:focus:border-dagblue focus:outline-none focus:ring-0 focus:border-dagblue peer" placeholder=" " required />
+                    <label for="name" class="pl-4 peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-2 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-dagblue peer-focus:dark:text-dagblue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"> Descripcion del contenido </label>
+                </div>              
+            </div> 
+            <div class="px-4 pb-4 flex justify-start w-full gap-6">                
+                <div class="relative group w-full">
+                    <button (click)="cotizarEnvio()" class="p-3 text-sm w-full shadow-md bg-dagblue rounded-lg text-white font-bold">
+                        Cotizar Envio
+                    </button>
+                </div>              
+            </div> 
+        </div>
+    </div>
+    <div *ngIf="cotizar" class="ml-36 p-6">
+        <div class="bg-slate-100 w-[70vw] rounded-lg p-4">
+            <div class="grid grid-cols-4 justify-evenly w-full gap-2">
+                <div class="w-full bg-white rounded-lg p-4">
+                    <div class="grid grid-cols-2 items-center">
+                        <img src="../../../assets/images/Icon Dagpacket.png" alt="" class="min-w-20 max-w-20">                    
+                        <div class="flex flex-col">
+                            <span> Paqueteria </span>
+                            <span class="text-xl font-bold"> $200.00 <span class="text-sm">MXN</span></span>
+                            <span class="text-sm"> Envio express </span>
+                            <span class="text-sm"> 3-5 días habiles </span>
+                            <span class="text-dagblue font-bold"> SKU. 221.0000</span>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="w-full bg-white rounded-lg p-4">
+                    <div class="grid grid-cols-2 items-center">
+                        <img src="../../../assets/images/Icon Dagpacket.png" alt="" class="min-w-20 max-w-20">                    
+                        <div class="flex flex-col">
+                            <span> Paqueteria </span>
+                            <span class="text-xl font-bold"> $200.00 <span class="text-sm">MXN</span></span>
+                            <span class="text-sm"> Envio express </span>
+                            <span class="text-sm"> 3-5 días habiles </span>
+                            <span class="text-dagblue font-bold"> SKU. 221.0000</span>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="w-full bg-white rounded-lg p-4">
+                    <div class="grid grid-cols-2 items-center">
+                        <img src="../../../assets/images/Icon Dagpacket.png" alt="" class="min-w-20 max-w-20">                    
+                        <div class="flex flex-col">
+                            <span> Paqueteria </span>
+                            <span class="text-xl font-bold"> $200.00 <span class="text-sm">MXN</span></span>
+                            <span class="text-sm"> Envio express </span>
+                            <span class="text-sm"> 3-5 días habiles </span>
+                            <span class="text-dagblue font-bold"> SKU. 221.0000</span>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="w-full bg-white rounded-lg p-4">
+                    <div class="grid grid-cols-2 items-center">
+                        <img src="../../../assets/images/Icon Dagpacket.png" alt="" class="min-w-20 max-w-20">                    
+                        <div class="flex flex-col">
+                            <span> Paqueteria </span>
+                            <span class="text-xl font-bold"> $200.00 <span class="text-sm">MXN</span></span>
+                            <span class="text-sm"> Envio express </span>
+                            <span class="text-sm"> 3-5 días habiles </span>
+                            <span class="text-dagblue font-bold"> SKU. 221.0000</span>
+                        </div>                        
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,349 @@
+<nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 shadow-md">
+    <div class="px-3 py-3 lg:px-5 lg:pl-3">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center justify-start rtl:justify-end">
+                <img [routerLink]="['/home']" src="../../../assets/images/dagPacket-logo.png" class="h-8 me-3 hover:cursor-pointer" alt="FlowBite Logo" />                
+            </div>
+            <div>
+                <button class="flex rounded-lg font-bold p-2 text-black hover:text-white hover:bg-dagblue duration-200 gap-2">                    
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M16.5 3.75a1.5 1.5 0 0 1 1.5 1.5v13.5a1.5 1.5 0 0 1-1.5 1.5h-6a1.5 1.5 0 0 1-1.5-1.5V15a.75.75 0 0 0-1.5 0v3.75a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V5.25a3 3 0 0 0-3-3h-6a3 3 0 0 0-3 3V9A.75.75 0 1 0 9 9V5.25a1.5 1.5 0 0 1 1.5-1.5h6ZM5.78 8.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 0 0 0 1.06l3 3a.75.75 0 0 0 1.06-1.06l-1.72-1.72H15a.75.75 0 0 0 0-1.5H4.06l1.72-1.72a.75.75 0 0 0 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                    <span> Salir </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+<aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0" aria-label="Sidebar">
+    <div class="w-full h-30 p-3">
+        <div class="bg-gray-100 py-3 rounded-lg">
+            <div class="flex justify-evenly items-center">
+                <img src="https://imgs.search.brave.com/ma7sEjlAFcmBAqpdxMvbQfehHQhOJ3dq-l8rWJdCTq0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzY0LzY3LzYz/LzM2MF9GXzY0Njc2/MzgzX0xkYm1oaU5N/NllwemIzRk00UFB1/RlA5ckhlN3JpOEp1/LmpwZw" alt="" class="rounded-full w-12">
+                <div class="">
+                    <span class="font-bold"> Alexei Palacios </span>
+                </div>
+            </div>
+            <div class="p-3">
+                <span class="text-black font-bold"> Balance: $ 00.00 </span>
+            </div>
+        </div>        
+    </div>
+    <div class="h-full px-3 pb-4 overflow-y-auto bg-white">
+    <ul class="space-y-2 font-medium">
+        <li>
+            <a [routerLink]="['/settings']" [ngClass]="{'bg-dagblue': isCurrentPage('/settings')}"  class="flex items-center p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100">               
+                <svg [ngClass]="{'text-white': isCurrentPage('/settings')}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                  </svg>                                   
+                <span [ngClass]="{'text-white': isCurrentPage('/settings')}" class="ms-3"> Configuración </span>
+            </a>
+        </li>        
+        <hr class="bg-dagblue flex-1 w-full">   
+        <li>
+            <a [routerLink]="['/home']" [ngClass]="{'bg-dagblue': isCurrentPage('/home')}"  class="flex items-center p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100">               
+                <svg [ngClass]="{'text-white': isCurrentPage('/home')}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg>                                                    
+                <span [ngClass]="{'text-white': isCurrentPage('/home')}" class="ms-3"> Inicio </span>
+            </a>
+        </li>   
+        <!-- ADMIN -->   
+        <li class="">
+            <div class="px-2">
+                <span class="font-bold uppercase text-sm"> Adminsitrador </span>       
+            </div>
+            <ul>
+                <li>
+                    <button [routerLink]="['/admin']" [ngClass]="{'bg-dagblue': isCurrentPage('/admin')}" class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span [ngClass]="{'text-white': isCurrentPage('/admin')}" class="flex-1 ms-3 whitespace-nowrap"> Resumen </span>
+                        </div>                                  
+                    </button>  
+                </li>
+                <li>
+                    <button [routerLink]="['/shipments']" [ngClass]="{'bg-dagblue': isCurrentPage('/shipments')}" class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full"> 
+                        <div class="flex">                
+                            <span [ngClass]="{'text-white': isCurrentPage('/shipments')}" class="flex-1 ms-3 whitespace-nowrap"> Usuarios </span>
+                        </div>                
+                    </button> 
+                </li>
+                <li>
+                    <button [routerLink]="['/history']" [ngClass]="{'bg-dagblue': isCurrentPage('/history')}"  class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full"> 
+                        <div class="flex">                
+                            <span  [ngClass]="{'text-white': isCurrentPage('/history')}" class="flex-1 ms-3 whitespace-nowrap"> Historial de Cotizaciones </span>
+                        </div>                
+                    </button> 
+                </li>
+                <li>
+                    <button [routerLink]="['/asdasd']" [ngClass]="{'bg-dagblue': isCurrentPage('/asdas')}" class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full"> 
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion 2 </span>
+                        </div>                
+                    </button> 
+                </li>
+            </ul>          
+        </li> 
+        <!-- PAQUETES -->   
+        <li class="">
+            <div class="px-2">
+                <span class="font-bold uppercase text-sm"> Paquetes </span>       
+            </div>
+            <ul>
+                <li>
+                    <button [routerLink]="['/quote']" [ngClass]="{'bg-dagblue': isCurrentPage('/quote')}" class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span [ngClass]="{'text-white': isCurrentPage('/quote')}" class="flex-1 ms-3 whitespace-nowrap"> Cotizar Paquete </span>
+                        </div>                                  
+                    </button>  
+                </li>
+                <li>
+                    <button [routerLink]="['/shipments']" [ngClass]="{'bg-dagblue': isCurrentPage('/shipments')}" class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full"> 
+                        <div class="flex">                
+                            <span [ngClass]="{'text-white': isCurrentPage('/shipments')}" class="flex-1 ms-3 whitespace-nowrap"> Estatus de Paquetes </span>
+                        </div>                
+                    </button> 
+                </li>
+                <li>
+                    <button [routerLink]="['/history']" [ngClass]="{'bg-dagblue': isCurrentPage('/history')}"  class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full"> 
+                        <div class="flex">                
+                            <span  [ngClass]="{'text-white': isCurrentPage('/history')}" class="flex-1 ms-3 whitespace-nowrap"> Historial de Cotizaciones </span>
+                        </div>                
+                    </button> 
+                </li>
+                <li>
+                    <button [routerLink]="['/asdasd']" [ngClass]="{'bg-dagblue': isCurrentPage('/asdas')}" class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full"> 
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion 2 </span>
+                        </div>                
+                    </button> 
+                </li>
+            </ul>          
+        </li>       
+        <!-- LICENCIATARIOS -->
+        <li class="">
+            <div class="px-2">
+                <span class="font-bold uppercase text-sm"> Licenciatarios </span>       
+            </div>
+            <ul>
+                <li>
+                    <button [routerLink]="['/licensees']"  [ngClass]="{'bg-dagblue': isCurrentPage('/licensees')}" class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap" [ngClass]="{ 'text-white': isCurrentPage('/licensees') }"> Resumen </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button [routerLink]="['/quote']" class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button [routerLink]="['/quote']" class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button [routerLink]="['/quote']" class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button [routerLink]="['/quote']" class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+            </ul>
+        </li>
+        <!-- Lockers -->
+        <li class="">
+            <div class="px-2">
+                <span class="font-bold uppercase text-sm"> Lockers </span>       
+            </div>
+            <ul>
+                <li>
+                    <button [routerLink]="['/viewlockers']"  [ngClass]="{'bg-dagblue': isCurrentPage('/viewlockers')}" class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span  [ngClass]="{'text-white': isCurrentPage('/viewlockers')}" class="flex-1 ms-3 whitespace-nowrap"> Estatus de Lockers </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button [routerLink]="['/locker']" class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Pantalla de locker </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+            </ul>
+        </li>    
+        <!-- Funciones -->
+        <li class="">
+            <div class="px-2">
+                <span class="font-bold uppercase text-sm"> Funciones </span>       
+            </div>
+            <ul>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+            </ul>
+        </li>      
+        <li class="">
+            <div class="px-2">
+                <span class="font-bold uppercase text-sm"> Servicios </span>       
+            </div>
+            <ul>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+            </ul>
+        </li> 
+        <li class="">
+            <div class="px-2">
+                <span class="font-bold uppercase text-sm"> OLIMPO </span>       
+            </div>
+            <ul>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+                <li>
+                    <button class="flex p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100 w-full">                         
+                        <div class="flex">                
+                            <span class="flex-1 ms-3 whitespace-nowrap"> Opcion </span>
+                        </div>                                  
+                    </button> 
+                </li>
+            </ul>
+        </li> 
+        <li>
+            <a href="#" class="flex items-center p-2 text-gray-700 rounded-lg group hover:bg-dagblue hover:text-white duration-100"> 
+                <svg class="flex-shrink-0 w-5 h-5 transition duration-75 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z" />
+                </svg>                  
+                <span class="flex-1 ms-3 whitespace-nowrap">Usuarios</span>                
+            </a>
+        </li>
+    </ul>
+    </div>
+</aside>
+
+

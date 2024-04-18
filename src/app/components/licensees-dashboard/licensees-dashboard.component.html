@@ -1,0 +1,122 @@
+<app-sidebar></app-sidebar>
+<div class="ml-64 mt-14">
+    <div class="p-6">
+        <span class="text-2xl font-bold"> Cuenta </span>
+        <p> Aqui encontraras los detalles de cuenta</p>
+    </div>
+    <div class="px-6 grid grid-cols-3 gap-6">
+        <div class="rounded-lg bg-slate-100 p-2">
+            <div class="w-full">
+                <canvas id="lastMonth" class="w-full"></canvas>  
+            </div>            
+        </div>
+        <div class="rounded-lg bg-slate-100 p-2">
+            <div class="w-full">
+                <canvas id="currentMonth" class="w-full"></canvas>  
+            </div>            
+        </div>
+        <div class="bg-gradient-to-r from-dagblue to-blue-600 flex flex-col rounded-lg">
+            <div class="p-4 flex flex-col w-ful">
+                <span class="text-white font-bold text-lg"> Balance de cuenta </span>
+                <h1 class="text-white font-bold text-4xl"> $ 9,000 MXN</h1>
+            </div>
+            <div class="p-4 flex flex-col justify-start w-full h-1/3 backdrop-filter-blur-md bg-black/30">                
+                <p class="text-white"> Nombre </p>
+                <span class="text-white font-bold text-xl">Alexei Palacios </span>
+            </div>
+            <div class="p-4 flex flex-col justify-start w-full h-1/3 backdrop-filter-blur-md bg-black/30 rounded-b-lg">                                
+                <button class="p-2 w-full hover:bg-dagpk duration-200 rounded-lg text-white font-bold border border-dagpk">
+                    Añadir fondos
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="px-2 pt-4">
+        <div class="px-5">
+            <span class="font-bold text-2xl"> Utilidad quincenal </span>
+        </div>
+        <div class="p-4 grid grid-cols-5 gap-2">
+            <div class="bg-slate-100 flex justify-start gap-6 p-2 items-center rounded-lg">
+                <button class="p-2 bg-dagblue text-white rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666ZM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" clip-rule="evenodd" />
+                        <path d="M5.26 17.242a.75.75 0 1 0-.897-1.203 5.243 5.243 0 0 0-2.05 5.022.75.75 0 0 0 .625.627 5.243 5.243 0 0 0 5.022-2.051.75.75 0 1 0-1.202-.897 3.744 3.744 0 0 1-3.008 1.51c0-1.23.592-2.323 1.51-3.008Z" />
+                    </svg>                                
+                </button>
+                <div class="flex flex-col">
+                    <span class="font-bold"> Envios </span>
+                    <span class="font-bold text-2xl"> $300.00 </span>
+                </div>                
+            </div>
+            <div class="bg-slate-100 flex justify-start gap-6 p-2 items-center rounded-lg">
+                <button class="p-2 bg-dagblue text-white rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path d="M12.378 1.602a.75.75 0 0 0-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03ZM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 0 0 .372-.648V7.93ZM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 0 0 .372.648l8.628 5.033Z" />
+                      </svg>                      
+                </button>
+                <div class="flex flex-col">
+                    <span class="font-bold"> Empaques </span>
+                    <span class="font-bold text-2xl"> $300.00 </span>
+                </div>                
+            </div>
+            <div class="bg-slate-100 flex justify-start gap-6 p-2 items-center rounded-lg">
+                <button class="p-2 bg-dagblue text-white rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375ZM6 12a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V12Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 15a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V15Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM6 18a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V18Zm2.25 0a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                      </svg>                                            
+                </button>
+                <div class="flex flex-col">
+                    <span class="font-bold"> Servicios </span>
+                    <span class="font-bold text-2xl"> $300.00 </span>
+                </div>                
+            </div>
+            <div class="bg-slate-100 flex justify-start gap-6 p-2 items-center rounded-lg">
+                <button class="p-2 bg-dagblue text-white rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v.816a3.836 3.836 0 0 0-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 0 1-.921-.421l-.879-.66a.75.75 0 0 0-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 0 0 1.5 0v-.81a4.124 4.124 0 0 0 1.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 0 0-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 0 0 .933-1.175l-.415-.33a3.836 3.836 0 0 0-1.719-.755V6Z" clip-rule="evenodd" />
+                      </svg>                                           
+                </button>
+                <div class="flex flex-col">
+                    <span class="font-bold"> Recargas </span>
+                    <span class="font-bold text-2xl"> $300.00 </span>
+                </div>                
+            </div>           
+        </div>
+    </div>
+    <div class="px-6 py-6">
+        <div class="p-4 bg-slate-100 w-full rounded-lg">
+            <span class="font-bold"> Transacciónes </span>
+            <div class="flex justify-between py-2">                
+                <div class="flex gap-6 font-bold">
+                    <div>
+                        <button [ngClass]="{'bg-dagblue': isShipmentsOpen, 'text-white': isShipmentsOpen}" (click)="showShipments()" class="px-4 py-2 rounded-xl border border-dagblue hover:bg-dagblue hover:text-white duration-150 hover:border-dagpk ">
+                            Envios
+                        </button>
+                    </div>
+                    <div>
+                        <button [ngClass]="{'bg-dagblue': isPackingOpen, 'text-white': isPackingOpen}" (click)="showPacking()" class="px-4 py-2 rounded-xl border border-dagblue hover:bg-dagblue hover:text-white duration-150 hover:border-dagpk ">
+                            Empaques
+                        </button>
+                    </div>
+                    <div>
+                        <button [ngClass]="{ 'bg-dagblue': isServicesOpen, 'text-white': isServicesOpen }" (click)="showServices()" class="px-4 py-2 rounded-xl border border-dagblue hover:bg-dagblue hover:text-white duration-150 hover:border-dagpk ">
+                            Servicios
+                        </button>
+                    </div>
+                    <div>
+                        <button [ngClass]="{ 'bg-dagblue': isRechargesOpen, 'text-white': isRechargesOpen }" (click)="showRecharges()" class="px-4 py-2 rounded-xl border border-dagblue hover:bg-dagblue hover:text-white duration-150 hover:border-dagpk ">
+                            Recargas
+                        </button>
+                    </div>                    
+                </div>
+            </div>
+            <hr class="bg-dagpk w-full my-3 p-[0.5px]">
+            <app-shipments-sended *ngIf="isShipmentsOpen"></app-shipments-sended>
+            <app-packing *ngIf="isPackingOpen"></app-packing>
+            <app-services *ngIf="isServicesOpen"></app-services>
+            <app-recharges *ngIf="isRechargesOpen"></app-recharges>
+        </div>
+    </div>
+</div>

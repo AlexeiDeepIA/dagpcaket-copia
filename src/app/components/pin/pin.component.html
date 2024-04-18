@@ -1,0 +1,38 @@
+<div class="px-6 ml-36 relative">
+    <div class="bg-gray-100 rounded-lg w-[60vw] shadow-lg">
+        <div class="p-4 flex justify-between">
+            <div class="flex-col p-2">                
+                <span class="font-bold text-lg"> Tu PIN es muy importante para la seguridad de tu cuenta </span>          
+                <p> No lo compartas con nadie </p>
+            </div>
+            <div class="p-2">
+                <button (click)="showNIP()" class="p-3 bg-dagyel rounded-lg font-bold hover:bg-yellow-600 duration-200">
+                    Ver NIP
+                </button>
+            </div>
+        </div>                      
+    </div>
+</div>
+<div *ngIf="showPin" class="absolute flex justify-center items-center inset-0 backdrop-filter-blur-md bg-black/20">    
+    <div class="bg-white p-2 rounded-lg w-[33vw]">
+        <div class="font-bold p-6">
+            <span> Ingresa tu contraseña para ver tu NIP</span>
+        </div>
+        <div class="relative z-0 mb-5 group w-full">
+            <input type="password" name="phone" id="phone" class="block rounded-lg p-3 w-full text-sm text-gray-900 border-2 appearance-none dark:focus:border-dagpk focus:outline-none focus:ring-0 focus:border-dagpk peer" placeholder=" " required />
+            <label for="phone" class="pl-4 peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-2 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-dagpk peer-focus:dark:text-dagpk peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"> Password </label>
+        </div>
+        <div class="flex justify-between w-full gap-3">
+            <div class="w-1/2">
+                <button (click)="close()" class=" p-2 bg-red-600 w-full text-white rounded-lg font-bold hover:bg-red-700 duration-200">
+                    Cerrar 
+                </button>
+            </div>
+            <div class="w-1/2">
+                <button class="p-2 bg-dagyel w-full text-black rounded-lg font-bold hover:bg-yellow-600 duration-200">
+                    Ver NIP
+                </button>
+            </div>
+        </div>
+    </div>    
+</div>

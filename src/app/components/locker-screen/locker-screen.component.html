@@ -1,0 +1,78 @@
+<div class="w-full h-[100vh] grid grid-cols-2 items-center bg-slate-100">
+    <div class="ml-28 flex flex-col gap-6">
+        <div [routerLink]="['/home']" class="bg-white rounded-lg shadow-md p-2 flex gap-6 items-center w-auto cursor-pointer">
+            <img src="../../../assets/images/pngegg.png" alt="" class="min-w-24 max-w-24 max-h-24">
+            <div class="flex-col">
+                <div class="pb-2">
+                    <span class="font-extrabold text-2xl"> ENVIO NACIONAL </span>
+                </div>
+                <hr class="bg-black w-full">
+                <div class="pt-2">
+                    <p class="text-xl"> Envia tus paquetes y sobres a cualquier parte de México. </p>
+                </div>
+            </div>
+        </div>
+        <div [routerLink]="['/home']" class="bg-white rounded-lg shadow-md p-2 flex gap-6 items-center w-auto cursor-pointer">
+            <img src="../../../assets/images/airplane.png" alt="" class="min-w-32 max-w-32 max-h-30">
+            <div class="flex-col">
+                <div class="pb-2">
+                    <span class="font-extrabold text-2xl uppercase"> ENVIO Internacional </span>
+                </div>
+                <hr class="bg-black w-full">
+                <div class="pt-2">
+                    <p class="text-xl"> Envía tus paquetes y sonres a cualquier parte del mundo. </p>
+                </div>
+            </div>
+        </div>
+        <div [routerLink]="['/home']" class="bg-white rounded-lg shadow-md p-2 flex gap-6 items-center w-auto cursor-pointer">
+            <img src="../../../assets/images/pin2.png" alt="" class="min-w-24 max-w-24 max-h-24">
+            <div class="flex-col">
+                <div class="pb-2">
+                    <span class="font-extrabold text-2xl uppercase"> ENVIO Local </span>
+                </div>
+                <hr class="bg-black w-full">
+                <div class="pt-2">
+                    <p class="text-xl"> Confía en nosotros para enviar tus paquetes y sobres en tu localidad </p>
+                </div>
+            </div>
+        </div>
+        <div [routerLink]="['/home']" class="bg-white rounded-lg shadow-md p-2 flex gap-6 items-center w-auto cursor-pointer">
+            <img src="../../../assets/images/pngwing.com (2).png" alt="" class="min-w-24 max-w-24 max-h-24">
+            <div class="flex-col">
+                <div class="pb-2">
+                    <span class="font-extrabold text-2xl uppercase"> Pagar Servicios </span>
+                </div>
+                <hr class="bg-black w-full">
+                <div class="pt-2">
+                    <p class="text-xl"> Realiza el pago de servicios desde cualquier lugar </p>
+                </div>
+            </div>
+        </div>
+        <div [routerLink]="['/home']" class="bg-white rounded-lg shadow-md p-2 flex gap-6 items-center w-auto cursor-pointer">
+            <img src="../../../assets/images/pngwing.com (3).png" alt="" class="min-w-24 max-w-24 max-h-26">
+            <div class="flex-col">
+                <div class="pb-2">
+                    <span class="font-extrabold text-2xl uppercase"> PAGAR Recargas </span>
+                </div>
+                <hr class="bg-black w-full">
+                <div class="pt-2">
+                    <p class="text-xl"> Encarguese de las recargas de manera sencilla </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contenedor de la derecha -->
+    <div class="flex flex-col">
+        <div *ngFor="let text of texts; let i = index" class="transition-opacity duration-500" [class.hidden]="currentIndex !== i" [class.opacity-100]="currentIndex === i">
+          <div class="px-20 py-6">
+            <span class="font-extrabold text-5xl" [innerHTML]="text.title"></span>
+          </div>
+          <div class="px-20">
+            <p class="text-3xl">{{ text.description }}</p>
+          </div>
+        </div>
+        <div class="px-20 py-12">
+          <img src="../../../assets/images/dagPacket-logo.png" alt="" class="max-w-[37vw]">
+        </div>
+    </div>
+</div>
